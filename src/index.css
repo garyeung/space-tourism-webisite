@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap');
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+
+    .text-preset-1 {
+     font-family: "Bellefair", serif;
+     font-weight: 400;
+     font-style: normal;
+     font-size: 144px;
+    }
+
+    .text-preset-2 {
+     font-family: "Bellefair", serif;
+     font-weight: 400;
+     font-style: normal;
+     font-size: 100px;
+    }
+
+    .text-preset-3 {
+     font-family: "Bellefair", serif;
+     font-weight: 400;
+     font-style: normal;
+     font-size: 56px;
+    }
+
+    .text-preset-4 {
+     font-family: "Bellefair", serif;
+     font-weight: 400;
+     font-style: normal;
+     font-size: 32px;
+    }
+
+    .text-preset-5{
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 400;
+        font-style: normal;        
+        font-size: 28px;
+        letter-spacing: 4px;
+
+    }
+
+    .text-preset-6{
+        font-family: "Bellefair", sans-serif;
+        font-weight: 400;
+        font-style: normal;        
+        font-size: 28px;
+
+    }
+
+    .text-preset-7{
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 400;
+        font-style: normal;        
+        font-size: 14px;
+        letter-spacing: 2px;
+
+    }
+
+    .text-preset-8{
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 400;
+        font-style: normal;        
+        font-size: 16px;
+        letter-spacing: 2px;
+
+    }
+
+    .text-preset-9 {
+     font-family: "Bellefair", serif;
+     font-weight: 400;
+     font-style: normal;
+     font-size: 18px;
+     line-height: 180%;
+    }
+
+    .smooth-border {
+        transition: border-color 0.4s ease;
+    }
+
+    .page-title{
+      @apply mb-6 text-center text-white tracking-[0.15em] font-sans uppercase md:text-xl md:text-left md:text-[28px];
+    }
+    .description{
+      @apply font-sans leading-[1.8] text-BLUE-300 text-center text-[15px] md:text-[16px] lg:text-lg lg:text-start;
+    }
+
+    .content {
+      @apply flex flex-col lg:flex-row gap-8;
+    }
+
+    .masking {
+      mask-image: linear-gradient(#d9d9d9 77%, transparent 100%);
+    }
+    .masking-none{
+      mask-image: none;
+    }
+
+    .explanation{
+      @apply mt-10 pb-6 text-center md:w-3/5 lg:w-fit mx-auto lg:pb-10 lg:mx-0 flex flex-col justify-center lg:text-left gap-6 h-full;
+    }
+    .explanation-text{
+      @apply text-white font-serif uppercase;
+    }
+    .explanation-rank{
+      @apply mb-2 text-lg opacity-50 md:text-2xl md:mb-4 lg:text-[32px];
+    }
+    .explanation-name{
+      @apply text-2xl md:text-[40px] lg:text-[56px] lg:leading-[4rem];
+    }
+
+
+}
+
+.fade-enter {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-enter-active {
+  opacity: 1;
+}
+
+.fade-exit {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-exit-active {
+  opacity: 0;
+}
