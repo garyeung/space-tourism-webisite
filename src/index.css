@@ -7,7 +7,7 @@
 @tailwind utilities;
 
 
-@layer components{
+@layer utilities{
 
     .text-preset-1 {
      font-family: "Bellefair", serif;
