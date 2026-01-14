@@ -95,6 +95,35 @@
         transition: border-color 0.4s ease;
     }
 
+    .fade-enter {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+  
+    .fade-enter-active {
+      opacity: 1;
+    }
+  
+    .fade-exit {
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+    }
+  
+    .fade-exit-active {
+      opacity: 0;
+    }
+
+    .masking {
+      mask-image: linear-gradient(#d9d9d9 77%, transparent 100%);
+    }
+    .masking-none{
+      mask-image: none;
+    }
+
+
+}
+
+@layer components {
     .page-title{
       @apply mb-6 text-center text-white tracking-[0.15em] font-sans uppercase md:text-xl md:text-left md:text-[28px];
     }
@@ -104,13 +133,6 @@
 
     .content {
       @apply flex flex-col lg:flex-row gap-8;
-    }
-
-    .masking {
-      mask-image: linear-gradient(#d9d9d9 77%, transparent 100%);
-    }
-    .masking-none{
-      mask-image: none;
     }
 
     .explanation{
@@ -126,23 +148,5 @@
       @apply text-2xl md:text-[40px] lg:text-[56px] lg:leading-[4rem];
     }
 
-
 }
 
-.fade-enter {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.fade-enter-active {
-  opacity: 1;
-}
-
-.fade-exit {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.fade-exit-active {
-  opacity: 0;
-}
