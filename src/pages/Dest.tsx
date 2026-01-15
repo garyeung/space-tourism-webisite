@@ -78,11 +78,11 @@ function Gallery({image,tabList,destName,description,distance,travelTime}:Galler
         <hr className="opacity-25"/>
         <div  className="mt-6 lg:mt-10 text-center grid grid-rows-2 md:grid-rows-none md:grid-cols-2 gap-6 lg:text-start">
             <div className="">
-                <h3 className="text-BLUE-300 text-preset-7 mb-3 uppercase">avg. distance</h3>
+                <h3 className="text-blue-300 text-preset-7 mb-3 uppercase">avg. distance</h3>
                 <p className="text-preset-6 text-white uppercase">{distance}</p>
             </div>
             <div>
-                <h3 className="text-BLUE-300 text-preset-7 uppercase mb-3">est. travel time</h3>
+                <h3 className="text-blue-300 text-preset-7 uppercase mb-3">est. travel time</h3>
                 <p className="text-preset-6 text-white uppercase">{travelTime}</p>
             </div>
         </div>
@@ -102,7 +102,7 @@ function Tab({selected, name,handleClick}:{selected: string, name: string, handl
 
 
     return (
-        <button onClick={() => handleClick(name)} className={`h-8 flex items-start border-b-[3px] font-sans text-sm md:text-base tracking-[0.15em] md:tracking-[2px] uppercase transition-colors duration-500 ${selected === name? 'border-white text-white':"border-transparent text-BLUE-300 hover:border-[rgba(255,255,255,0.5)] "}`}><span className='pl-[2px]'>{name}</span></button>
+        <button onClick={() => handleClick(name)} className={`h-8 flex items-start border-b-[3px] font-sans text-sm md:text-base tracking-[0.15em] md:tracking-[2px] uppercase transition-colors duration-500 ${selected === name? 'border-white text-white':"border-transparent text-blue-300 hover:border-[rgba(255,255,255,0.5)] "}`}><span className='pl-[2px]'>{name}</span></button>
     )
 }
 

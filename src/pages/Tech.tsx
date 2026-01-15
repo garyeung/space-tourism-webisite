@@ -89,7 +89,7 @@ function Dot({id,active, num, handleClick}:{
     active: string,
     handleClick:(id:string) => void
 }){
-    return (<button className={`h-10 w-10 lg:h-20 lg:w-20 rounded-full text-lg lg:text-[32px] font-serif border border-white border-opacity-25 transition-colors duration-500 ${(active === id?'bg-white text-BLUE-900':'text-white bg-none hover:border-opacity-100')}`} onClick={() => handleClick(id)}>{num}</button>)
+    return (<button className={`h-10 w-10 lg:h-20 lg:w-20 rounded-full text-lg lg:text-[32px] font-serif border border-white border-opacity-25 transition-colors duration-500 ${(active === id?'bg-white text-blue-900':'text-white bg-none hover:border-opacity-100')}`} onClick={() => handleClick(id)}>{num}</button>)
 }
 
 function Image({landscape, portrait}:{landscape:string, portrait:string}){
