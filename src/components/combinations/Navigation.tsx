@@ -4,11 +4,11 @@ import IconHambuger from "@/assets/shared/icon-hamburger.svg?react"
 import IconClose from "@/assets/shared/icon-close.svg?react"
 import Nav, { NavProps } from "@/components/bases/Nav"
 
-interface Props {
+export interface NavigationProps {
     routes: NavProps[]
 }
 
-const Navigation = ({routes}: Props) => {
+const Navigation = ({routes}: NavigationProps) => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => {
         setOpen(true);
@@ -36,7 +36,7 @@ const Navigation = ({routes}: Props) => {
                 <button 
                 onClick={handleOpen}
                 aria-label="open menu"><IconHambuger /></button>
-                <div>
+                <div className={`${open? "block": "hidden"}`}>
                     <button onClick={handleClose} aria-label="close menu"><IconClose /></button>
                     <div>
                         {navs}
