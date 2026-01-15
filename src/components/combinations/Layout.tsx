@@ -1,9 +1,8 @@
 import Navigation, { NavigationProps } from "@/components/combinations/Navigation";
+import Background, { BackgroundProps } from "../bases/Background";
 
 interface Props {
-    backgroundImgMobile: string,
-    backgroundImgTable: string,
-    backgroundImgdesktop: string,
+    backgroundImages: BackgroundProps
     slot: React.ReactNode,
     navigations: NavigationProps
 
@@ -11,7 +10,8 @@ interface Props {
 
 
 const Layout = ({
-  backgroundImgMobile: mobileImg, backgroundImgTable: tabletImg, backgroundImgdesktop: desktopImg, slot: children,
+  backgroundImages,
+  slot: children,
   navigations
 }: Props) => {
 
@@ -19,20 +19,7 @@ const Layout = ({
     return (
         <div className="relative w-full">
           <div>
-              <img className="md:hidden" 
-              src={mobileImg}
-              alt=""
-              />
-              <img 
-              className="hidden md:block"
-              src={tabletImg}
-              alt=""
-              />
-              <img 
-              className="hiiden lg:block"
-              src={desktopImg}
-              alt=""
-              />
+            <Background {...backgroundImages} />
           </div>
           <div 
           className="
