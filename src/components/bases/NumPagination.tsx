@@ -13,6 +13,8 @@ const NumPagination = ({handleClick, active, num}: Props) => {
             className={`
                 w-14
                 h-14
+                lg:w-20
+                lg:h-20
                 rounded-full
                 bg-white
                 border-[1px]
