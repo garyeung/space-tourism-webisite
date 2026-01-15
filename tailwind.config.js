@@ -24,6 +24,10 @@ export default {
         "1000": "80px",
         "1200": "96px",
         "1600": "128px"
+      },
+      fontFamily: {
+        "bellefair": "Bellefair, serif",
+        "barlow": "Barlow Condensed, sans-serif"
       }
 
     },
