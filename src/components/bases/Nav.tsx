@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom"
 
-interface Props {
+export interface NavProps {
     path: string,
     label: string
 }
 
-const Nav = ({path, label}: Props) => {
+const Nav = ({path, label}: NavProps) => {
     return (
         <NavLink to={path} className={
             ({isActive})=> ` 
