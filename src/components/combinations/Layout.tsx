@@ -1,10 +1,9 @@
-import Navigation, { NavigationProps } from "@/components/combinations/Navigation";
+import Navigation from "@/components/combinations/Navigation";
 import Background, { BackgroundProps } from "@/components/bases/Background";
 
 interface Props {
     backgroundImages: BackgroundProps
     children: React.ReactNode,
-    navigationProps: NavigationProps
 
 }
 
@@ -12,7 +11,6 @@ interface Props {
 const Layout = ({
   backgroundImages,
   children,
-  navigationProps
 }: Props) => {
 
     
@@ -20,7 +18,7 @@ const Layout = ({
         <div className="relative min-h-screen">
           <Background {...backgroundImages} />
           <header>
-            <Navigation {...navigationProps} />
+            <Navigation/>
           </header>
           <main>
             {children}
