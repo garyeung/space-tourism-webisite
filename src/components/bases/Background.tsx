@@ -1,11 +1,11 @@
 export interface BackgroundProps {
-    mobileImg: string,
-    tabletImg: string,
-    desktopImg: string
+    mobile: string,   // Path to mobile image (PNG/JPG)
+    tablet: string,    // Path to tablet image (PNG/JPG)
+    desktop: string    // Path to desktop image (PNG/JPG)
 }
 
 
-const Background = ({mobileImg,tabletImg,desktopImg}: BackgroundProps) => {
+const Background = ({mobile: mobileImg,tablet: tabletImg,desktop: desktopImg}: BackgroundProps) => {
 
     return (
         <picture className="absolute inset-0 -z-10">
