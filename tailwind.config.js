@@ -8,6 +8,7 @@ export default {
         "blue-300": '#D0D6F9',
         "LOGO-LINE": '#979797',
         "white": "#FFFFFF",
+        "blur" : "rgba(11, 13, 23, 0.15)"
 
       },
       spacing: {
