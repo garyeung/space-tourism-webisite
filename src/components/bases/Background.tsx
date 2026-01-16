@@ -8,9 +8,12 @@ export interface BackgroundProps {
 const Background = ({mobile: mobileImg,tablet: tabletImg,desktop: desktopImg}: BackgroundProps) => {
 
     return (
-        <picture className="absolute inset-0 -z-10">
-            <source srcSet={desktopImg} media="min-width: 1024px" />            
-            <source srcSet={tabletImg} media="min-width: 768px" />
+        <picture className="
+        absolute 
+        inset-0 
+        -z-10">
+            <source srcSet={desktopImg} media="(min-width: 1024px)" />            
+            <source srcSet={tabletImg} media="(min-width: 768px)" />
             <img src={mobileImg} alt=""
             className="
             w-full
