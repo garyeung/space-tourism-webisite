@@ -1,26 +1,26 @@
 import Navigation, { NavigationProps } from "@/components/combinations/Navigation";
-import Background, { BackgroundProps } from "../bases/Background";
+import Background, { BackgroundProps } from "@/components/bases/Background";
 
 interface Props {
     backgroundImages: BackgroundProps
-    slot: React.ReactNode,
-    navigations: NavigationProps
+    children: React.ReactNode,
+    navigationProps: NavigationProps
 
 }
 
 
 const Layout = ({
   backgroundImages,
-  slot: children,
-  navigations
+  children,
+  navigationProps
 }: Props) => {
 
     
     return (
-        <div className="">
+        <div className="relative min-h-screen">
           <Background {...backgroundImages} />
           <header>
-            <Navigation {...navigations} />
+            <Navigation {...navigationProps} />
           </header>
           <main>
             {children}
