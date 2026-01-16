@@ -1,8 +1,8 @@
-import IconLogo from "@/assets/shared/logo.svg?react"
+import IconLogo from "@/assets/shared/logo.svg"
 const Logo = () => {
     return (
-        <div>
-            <IconLogo title="logo"/>
+        <div className="w-10 md:w-fit">
+            <img src={IconLogo} alt="logo" />
         </div>
     )
 }
