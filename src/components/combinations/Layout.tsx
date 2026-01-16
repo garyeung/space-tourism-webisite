@@ -17,25 +17,14 @@ const Layout = ({
 
     
     return (
-        <div className="relative w-full">
-          <div>
-            <Background {...backgroundImages} />
-          </div>
-          <div 
-          className="
-          absolute
-          w-full
-          h-full
-          top-0
-          left-0
-          ">
-            <header>
-              <Navigation {...navigations} />
-            </header>
-            <main>
-              {children}
-            </main>
-          </div>
+        <div className="">
+          <Background {...backgroundImages} />
+          <header>
+            <Navigation {...navigations} />
+          </header>
+          <main>
+            {children}
+          </main>
         </div>
     )
 }
