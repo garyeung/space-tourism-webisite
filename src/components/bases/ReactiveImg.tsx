@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from "react"
 
 interface Props {
-    url: string,
-    alt: string
+    webSrc: string,
+    fallbackSrc: string,
+    alt: string,
+    className?: string
 }
 
-const ReactiveImg = ({url,alt}:Props) => {
+const ReactiveImg = ({webSrc, fallbackSrc, alt,className}:Props) => {
     const [loading, setLoading] = useState(true);
     const imgRef = useRef<HTMLImageElement>(null);
 
@@ -20,19 +22,27 @@ const ReactiveImg = ({url,alt}:Props) => {
     },[])
 
     return (
-    <div className={`${loading?"bg-white animate-spin":""}`}>
-      <img 
-      ref={imgRef}
-      src={url} alt={alt} 
-      className={`
-        ${loading? "opacity-0": "opacity-100"}
-        w-full
-        h-full  
-        object-cover
-        transition-opacity
-        duration-500
-      `}
-       />
+    <div className={`relative w-full h-full flex justify-center items-center`}>
+      {loading&&<div className=" w-12 h-12 border-4 border-white/50 rounded-full animate-spin bg-white"></div>}
+
+      <picture>
+        <source srcSet={webSrc} type="image/webp" />
+        <img 
+        ref={imgRef}
+        src={fallbackSrc} alt={alt} 
+        onLoad={handleLoad}
+        className={`
+          ${loading? "opacity-0": "opacity-100"}
+          w-full
+          h-full  
+          object-cover
+          transition-opacity
+          duration-500
+          ${className || ""}
+        `}
+         />
+
+      </picture>
     </div>
     )
 }
