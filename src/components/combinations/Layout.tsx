@@ -17,10 +17,10 @@ const Layout = ({
     return (
         <div className="relative min-h-screen">
           <Background {...backgroundImages} />
-          <header>
+          <header className="p-6">
             <Navigation/>
           </header>
-          <main>
+          <main className="p-6">
             {children}
           </main>
         </div>
