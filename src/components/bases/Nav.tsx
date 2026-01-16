@@ -9,6 +9,7 @@ const Nav = ({path, label}: NavProps) => {
     return (
         <NavLink to={path} className={
             ({isActive})=> ` 
+                inline-block
                 text-base
                 font-barlow
                 tracking-[2px]
@@ -18,8 +19,8 @@ const Nav = ({path, label}: NavProps) => {
                 w-full
                 border-white
                 hover:border-opacity-50
-                border-r-[3px]
-                md:border-b-[3px]
+                border-r-4
+                md:border-b-4
                 ${isActive? "border-opacity-100": "border-opacity-0"}
                 `
         }>
