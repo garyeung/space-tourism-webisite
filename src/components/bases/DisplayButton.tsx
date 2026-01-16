@@ -27,7 +27,7 @@ const DisplayButton = ({path}: Props) => {
             outline-offset-0
             transition-all
             duration-500
-            hover:outline-[rgba(255,255,255,0.1)]
+            hover:outline-white/10]
             `}
         >
             explore
