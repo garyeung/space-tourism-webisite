@@ -7,13 +7,23 @@ interface HeroProps {
 const Hero = (props:HeroProps) => {
 
     return (
-        <section>
+        <section className="grid grid-rows-[auto,1fr]">
             <article className="text-blue-300 text-center">
-              <p className="font-barlow text-base tracking-[15%] uppercase">{props.subtitle}</p>
-              <h1 className="text-white">{props.title}</h1>
-              <p>{props.descrition}</p>
+              <p className="font-barlow text-base uppercase">{props.subtitle}</p>
+              <h1 className="
+                font-bellefair
+              text-white
+                text-[80px]
+                uppercase
+              ">{props.title}</h1>
+              <p className="
+                font-barlow
+                text-sm
+                leading-[1.8]
+              "
+              >{props.descrition}</p>
             </article>
-            <div>
+            <div className="m-auto">
                 {props.children}
             </div>
         </section>
