@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css'
-import Root from './components/combinations/Root';
-import Home from './pages/Home';
-import { appConfig } from './app.config';
+import Root from '@/components/combinations/Root';
+import Home from '@/pages/Home';
+import { appConfig } from '@/app.config';
 
 function App() {
     
