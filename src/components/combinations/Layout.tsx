@@ -15,12 +15,12 @@ const Layout = ({
 
     
     return (
-        <div className="relative min-h-screen">
+        <div className="relative min-h-screen flex flex-col">
           <Background {...backgroundImages} />
           <header className="p-6">
             <Navigation/>
           </header>
-          <main className="p-6">
+          <main className="p-6 flex-1 grid">
             {children}
           </main>
         </div>
