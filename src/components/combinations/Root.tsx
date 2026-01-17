@@ -1,16 +1,15 @@
 import Navigation from "@/components/combinations/Navigation";
 import Background, { BackgroundProps } from "@/components/bases/Background";
+import { Outlet } from "react-router-dom";
 
 interface Props {
     backgroundImages: BackgroundProps
-    children: React.ReactNode,
 
 }
 
 
-const Layout = ({
+const Root = ({
   backgroundImages,
-  children,
 }: Props) => {
 
     
@@ -21,10 +20,10 @@ const Layout = ({
             <Navigation/>
           </header>
           <main className="p-6 flex-1 grid">
-            {children}
+            <Outlet />
           </main>
         </div>
     )
 }
 
-export default Layout;
+export default Root;
