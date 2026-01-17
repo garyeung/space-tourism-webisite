@@ -9,25 +9,28 @@ const DisplayButton = ({path}: Props) => {
     return (
         <NavLink to={path}
         className={`
+            block
+            content-center
             w-36
             h-36
             md:w-[272px]
             md:h-[272px]
             rounded-full
             bg-white
+            font-bellefair
             text-blue-900 
             text-center
             text-lg
-            uppercase
             md:text-[32px]
-            font-bellefair
-            hover:text-opacity-50
-            outline-[88px]
-            outline-transparent
-            outline-offset-0
+            uppercase
             transition-all
             duration-500
-            hover:outline-white/10]
+            hover:text-opacity-50
+            outline
+            outline-transparent
+            outline-offset-0
+            hover:outline-[88px]
+            hover:outline-white/10
             `}
         >
             explore
