@@ -13,7 +13,7 @@ const Root = () => {
     useEffect(() =>{
         const currentPath = location.pathname;
         const configKey = Object.keys(appConfig).find(key => {
-          appConfig[key as keyof typeof appConfig].path.includes(currentPath);
+          return appConfig[key as keyof typeof appConfig].path === currentPath;
         }) 
 
         if(configKey) {
