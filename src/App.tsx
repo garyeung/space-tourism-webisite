@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css'
 import Root from './components/combinations/Root';
-import HomePage from './pages/HomePage';
+import Home from './pages/Home';
 import { appConfig } from './app.config';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       children: [
         {
           index: true,
-          element: <HomePage title={appConfig.home.title} subTitle={appConfig.home.subtitle} description={appConfig.home.description}/>,
+          element: <Home title={appConfig.home.title} subTitle={appConfig.home.subtitle} description={appConfig.home.description}/>,
         },
       ]
     }

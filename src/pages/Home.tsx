@@ -7,7 +7,7 @@ interface Props {
     description: string
 }
 
-const HomePage = ({title,subTitle,description}:Props) => {
+const Home = ({title,subTitle,description}:Props) => {
 
     return (
         <Hero 
@@ -20,4 +20,4 @@ const HomePage = ({title,subTitle,description}:Props) => {
     )
 }
 
-export default HomePage;
+export default Home;
