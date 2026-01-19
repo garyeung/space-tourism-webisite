@@ -6,6 +6,7 @@ import { appConfig } from '@/app.config';
 import Destination from '@/pages/Destination';
 import { fetchData, IData } from '@/services/fetchData';
 import { useEffect, useState } from 'react';
+import Crew from './pages/CrewPage';
 
 function App() {
   const [data, setData] = useState<IData|null>(null);
@@ -34,6 +35,10 @@ function App() {
         {
           path: appConfig.destination.path,
           element: <Destination destinations={data.destinations} /> 
+        },
+        {
+          path: appConfig.crew.path,
+          element: <Crew crews={data.crew} />
         }
       ]
     }
