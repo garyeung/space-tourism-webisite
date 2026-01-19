@@ -18,7 +18,7 @@ const Hero = (props:HeroProps) => {
               ">{props.title}</h1>
               <p className="
                 font-barlow
-                text-sm
+                text-[15px]
                 leading-[1.8]
               "
               >{props.descrition}</p>
