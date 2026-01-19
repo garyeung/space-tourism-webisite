@@ -36,6 +36,7 @@ const ReactiveImg = ({webSrc, fallbackSrc, alt,className}:Props) => {
           object-cover
           transition-opacity
           duration-500
+          m-auto
           ${className || ""}
         `}
          />
