@@ -33,8 +33,6 @@ const ReactiveImg = ({webSrc, fallbackSrc, alt,className}:Props) => {
         onLoad={handleLoad}
         className={`
           ${loading? "opacity-0": "opacity-100"}
-          w-full
-          h-full  
           object-cover
           transition-opacity
           duration-500
