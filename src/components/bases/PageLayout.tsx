@@ -3,10 +3,10 @@ interface Props {
     title: string,
     image: React.ReactNode,
     explantion: React.ReactNode
-    contentStyle?: string
+    className?: string
 }
 
-const PageLayout = ({number, title, image, explantion, contentStyle}:Props) => {
+const PageLayout = ({number, title, image, explantion, className: contentStyle}:Props) => {
     return (
         <section className="flex flex-col gap-y-6">
             <div>

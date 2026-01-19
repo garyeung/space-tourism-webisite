@@ -67,7 +67,7 @@ const Crew = ({crews}:Props) => {
               </div>
             }
 
-            contentStyle="flex-col-reverse"
+            className="flex-col-reverse"
         />
     )
 }
