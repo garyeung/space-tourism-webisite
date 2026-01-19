@@ -6,7 +6,7 @@ import { appConfig } from '@/app.config';
 import Destination from '@/pages/Destination';
 import { fetchData, IData } from '@/services/fetchData';
 import { useEffect, useState } from 'react';
-import Crew from './pages/CrewPage';
+import Crew from './pages/Crew';
 
 function App() {
   const [data, setData] = useState<IData|null>(null);
