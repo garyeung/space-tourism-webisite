@@ -3,6 +3,7 @@ import Logo from "@/components/bases/Logo"
 import IconHambuger from "@/assets/shared/icon-hamburger.svg?react"
 import IconClose from "@/assets/shared/icon-close.svg?react"
 import NavLinks from "@/components/combinations/NavLinks"
+import Line from "../bases/Line"
 
 const Navigation = () => {
     const [open, setOpen] = useState(false);
@@ -10,9 +11,23 @@ const Navigation = () => {
     const toggleMenu = () => setOpen((pre) => !pre);
 
     return (
-        <nav className="flex justify-between items-center">
-            <div>
+        <nav className="grid grid-cols-[auto,1fr] justify-items-end items-center
+        lg:grid-cols-2
+        lg:justify-items-start
+        ">
+            <div className="
+            w-full
+            md:pl-10
+            lg:pl-16
+            grid
+            grid-cols-[auto,1fr]
+            items-center
+            gap-x-8
+            ">
                 <Logo/>
+                <div className="relative z-[2] -right-8">
+                  <Line/>
+                </div>
             </div>
             <div className="md:hidden" id="mobile-menu">
                 <button 
@@ -33,7 +48,8 @@ const Navigation = () => {
                     gap-y-12
                     w-3/4 
                     h-full 
-                    blur-bg
+                    bg-blur
+                    backdrop-blur
                     ms-auto
                     items-start
                     pl-8
@@ -52,7 +68,8 @@ const Navigation = () => {
                     </div>
                 </div>
             </div>
-            <div className="hidden md:block">
+            <div className="hidden md:block flex-1 w-full md:px-10 bg-white/5 backdrop-blur
+            lg:px-16">
                 <NavLinks/>
             </div>
         </nav>
