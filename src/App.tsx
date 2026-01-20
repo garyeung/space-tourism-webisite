@@ -7,6 +7,7 @@ import Destination from '@/pages/Destination';
 import { fetchData, IData } from '@/services/fetchData';
 import { useEffect, useState } from 'react';
 import Crew from './pages/Crew';
+import Technology from './pages/Technology';
 
 function App() {
   const [data, setData] = useState<IData|null>(null);
@@ -39,6 +40,10 @@ function App() {
         {
           path: appConfig.crew.path,
           element: <Crew crews={data.crew} />
+        },
+        {
+          path: appConfig.technology.path,
+          element: <Technology technologies={data.technology} />
         }
       ]
     }
