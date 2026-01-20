@@ -54,7 +54,7 @@ const Destination = ({destinations}:Props) => {
             </div>
             <div className="text-center">
                 <h1 className="text-white text-[56px] font-bellefair uppercase">{destination.name}</h1>
-                <p className="text-blue-300 text-[15px] leading-[1.8] font-barlow">{destination.description}</p>
+                <p className="description">{destination.description}</p>
             </div>
             <Line />
             <div className="flex flex-col gap-y-6 justify-center">

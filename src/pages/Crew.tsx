@@ -52,7 +52,7 @@ const Crew = ({crews}:Props) => {
                             <h1 className="text-2xl">{crew.name}</h1>
                         </div>
                         <div className="pb-10">
-                          <p className="text-blue-300 text-[15px] leading-[1.8]">{crew.bio}</p>
+                          <p className="description">{crew.bio}</p>
 
                         </div>
                     </div>
