@@ -11,8 +11,10 @@ const NumPagination = ({handleClick, active, num}: Props) => {
             role="pagination"
             onClick={handleClick}
             className={`
-                w-14
-                h-14
+                w-10
+                h-10
+                md:w-14
+                md:h-14
                 lg:w-20
                 lg:h-20
                 rounded-full
