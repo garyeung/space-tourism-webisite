@@ -7,6 +7,17 @@ interface HeroProps {
 const Hero = (props:HeroProps) => {
 
     return (
+      <div className="
+        p-6 
+        flex-1 
+        grid 
+        md:px-10 
+        md:py-32
+        lg:px-0
+        lg:py-32
+        justify-items-center
+        lg:items-end
+      ">
         <section className="
         grid 
         grid-rows-[auto,1fr]
@@ -50,6 +61,7 @@ const Hero = (props:HeroProps) => {
                 {props.children}
             </div>
         </section>
+      </div>
     )
 }
 
