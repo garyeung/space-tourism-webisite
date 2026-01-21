@@ -33,6 +33,7 @@ const ReactiveImg = ({webSrc, fallbackSrc, alt,className}:Props) => {
         ref={imgRef}
         src={fallbackSrc} alt={alt} 
         onLoad={handleLoad}
+        loading="lazy"
         className={`
           ${loading? "opacity-0": "opacity-100"}
           object-cover
