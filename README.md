@@ -1,45 +1,12 @@
 # Frontend Mentor - Space tourism website solution
 
-This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
-
-## Table of contents
-
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-
-## Overview
-
-### The challenge
-
-Users should be able to:
-
-- View the optimal layout for each of the website's pages depending on their device's screen size
-- See hover states for all interactive elements on the page
-- View each page and be able to toggle between the tabs to see new information
-
-### Screenshot
-
-![Desktop](./Space-desktop.png)
-![Tablet](./Space-tablet.png)
-![Mobile](./Space-mobile.png)
+This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). 
 
 
 ### Links
 - Solution URL: [Space Tourism Website Solution](https://github.com/garyeung/space-tourism-webisite)
 - Live Site URL: [Space Tourism Website Live](https://space-tourism-webisite.vercel.app/)
 
-
-## My process
 
 ### Built with
 
@@ -48,15 +15,70 @@ Users should be able to:
 - [TailwindCSS](https://tailwindcss.com/) - CSS Framework
 - [React Router](https://reactrouter.com/) - Routing
 
-### What I learned
-Learned how to styling the website acrroding to the design in figma
-Learned how to routing different pages by react router
+## Project Structure
 
-### Continued development
-Using a full stack framwork to build a real webisite
+```
+/
+├── public/              # Static assets
+├── src/
+│   ├── assets/          # Assets like images and fonts
+│   ├── components/      # Reusable React components
+│   │   ├── bases/       # Basic, single-purpose components
+│   │   └── combinations/# Components composed of smaller components
+│   ├── pages/           # Page components for each route
+│   ├── services/        # Services like data fetching
+│   ├── utils/           # Utility functions
+│   ├── app.config.ts    # Main application configuration
+│   ├── App.tsx          # Main App component
+│   ├── data.json        # Data for the application
+│   ├── index.css        # Global styles
+│   ├── index.tsx        # Entry point of the application
+│   └── routes.ts        # Route definitions
+├── .gitignore
+├── package.json
+├── README.md
+├── tailwind.config.js
+└── vite.config.ts
+```
 
-### Useful resources
+## Getting Started
 
-## Author
+### Prerequisites
 
-## Acknowledgments
+Make sure you have Node.js and npm installed on your machine.
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/garyeung/space-tourism-webisite.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+
+### Running the application
+
+To run the app in development mode:
+```sh
+npm run dev
+```
+This will open the app at `http://localhost:5173` (or another port if 5173 is in use).
+
+To build the app for production:
+```sh
+npm run build
+```
+
+To preview the production build locally:
+```sh
+npm run preview
+```
+
+
+### Screenshot
+<img src="./Space-desktop.png" alt="desktop" width="300px" />
+<img src="./Space-tablet.png" alt="tablet" width="300px" />
+<img src="./Space-mobile-menu.png" alt="mobile-menu" width="300px" />
+
