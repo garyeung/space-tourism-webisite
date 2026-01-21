@@ -1,12 +1,16 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import Logo from "@/components/bases/Logo"
 import IconHambuger from "@/assets/shared/icon-hamburger.svg?react"
 import IconClose from "@/assets/shared/icon-close.svg?react"
 import NavLinks from "@/components/combinations/NavLinks"
 import Line from "../bases/Line"
+import { useClickOutside } from "@/utils/useClickOutside"
 
 const Navigation = () => {
     const [open, setOpen] = useState(false);
+    const menuboardRef = useRef<HTMLDivElement>(null);
+  
+    useClickOutside(menuboardRef, () => setOpen(false))
 
     const toggleMenu = () => setOpen((pre) => !pre);
 
@@ -42,7 +46,9 @@ const Navigation = () => {
                 transition-transform
                 duration-300
                 `}>
-                    <div className="
+                    <div 
+                    ref={menuboardRef}
+                    className="
                     flex 
                     flex-col 
                     gap-y-12
