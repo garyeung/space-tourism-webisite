@@ -28,7 +28,7 @@ const Technology = ({technologies}:Props) => {
     }
 
     const numPageList = (
-        <ul className="flex flex-row gap-x-4 justify-center">
+        <ul className="flex flex-row gap-4 justify-center lg:flex-col lg:gap-8">
             {
                 technologies.map((item, index) => {
                     return (
@@ -48,17 +48,21 @@ const Technology = ({technologies}:Props) => {
 
     return (
         <PageLayout 
+        className="lg:justify-items-end"
+        contentStyle="flex-1 items-center"
         number={3}
         title={"space launch 101"}
         explantion={
-        <div className="flex flex-col gap-y-10">
+        <div className="flex flex-col gap-10 justify-between max-w-[512px] lg:flex-row lg:gap-16 lg:max-w-[635px]">
             <div>
                {numPageList}
             </div>
-            <div className="flex flex-col gap-y-4 text-center">
-                <div className="font-bellefair text-white uppercase text-lg flex flex-col gap-y-4">
-                    <span className="text-lg opacity-[50.42%]">this terminology...</span> 
-                    <h1 className="text-2xl">{technology.name}</h1>
+            <div className="flex flex-col gap-4 text-center lg:gap-6 lg:text-left">
+                <div className="font-bellefair text-white uppercase text-lg flex flex-col gap-4">
+                    <span className="text-lg opacity-[50.42%] md:text-2xl lg:text-[32px]">this terminology...</span> 
+                    <h1 className="text-2xl md:text-[40px] md:leading-normal
+                    lg:text-[56px]
+                    ">{technology.name}</h1>
                 </div>
                 <div>
                     <p className="description">{technology.description}</p>
@@ -68,9 +72,10 @@ const Technology = ({technologies}:Props) => {
         }
 
         image={
-        <div>
+        <div className="lg:order-2">
             <div className="hidden md:block lg:hidden">
                 <ReactiveImg webSrc="" fallbackSrc={technology.images.landscape} alt={technology.name} 
+                className="[transform:scale(1.2)]"
                 />
 
             </div>
@@ -78,7 +83,10 @@ const Technology = ({technologies}:Props) => {
                 <ReactiveImg webSrc="" fallbackSrc={technology.images.portrait} alt={technology.name}
                 className="
                 [transform:scale(1.2)] 
-                [clip-path:inset(64px_0_0_0)]"
+                [clip-path:inset(64px_0_0_0)]
+                lg:[clip-path:inset(32px_0_0_0)]
+                lg:pb-8
+                "
                 />
             </div>
         </div>
