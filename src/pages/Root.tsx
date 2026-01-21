@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { appConfig } from "@/app.config";
 
 
-
 const Root = () => {
     const [background, setBackground] = useState<BackgroundProps>(appConfig.home.background)
     const location = useLocation();
@@ -28,17 +27,7 @@ const Root = () => {
           <header className="p-6 md:p-0 lg:pt-10">
             <Navigation/>
           </header>
-          <main className="
-          p-6 
-          flex-1 
-          grid 
-          md:px-10 
-          md:py-32
-          lg:px-0
-          lg:py-32
-          justify-items-center
-          lg:items-end
-          ">
+          <main>
             <Outlet />
           </main>
         </div>
