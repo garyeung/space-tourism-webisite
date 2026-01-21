@@ -5,7 +5,7 @@ interface Props {
 }
 const Statistic = ({title, value}:Props) => {
         return (
-            <div className="flex flex-col gap-y-3 uppercase text-center">
+            <div className="flex flex-col gap-y-3 uppercase text-center w-full lg:text-left">
                 <h2 className="text-blue-300 text-sm font-barlow tracking-[2px]">{title}</h2>
                 <p className="text-white text-[28px] font-bellefair">{value}</p>
             </div>
