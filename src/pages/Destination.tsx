@@ -33,12 +33,14 @@ const Destination = ({destinations}:Props) => {
  
     return (
         <PageLayout 
+        className="lg:justify-center"
         number={1}
         title={"pick your destination"}
         explantion= {
-          <div className="flex flex-col gap-y-6">
+        <div className="md:min-w-[688px] lg:min-w-[549px]">
+          <div className="flex flex-col gap-6 lg:gap-10 max-w-[514px] lg:max-w-[445px] m-auto">
             <div>
-                <ul className="flex flex-row gap-x-8 justify-center">
+                <ul className="flex flex-row gap-x-8 justify-center lg:justify-start">
                     {
                         destinations.map((item) => {
                             return (
@@ -52,23 +54,23 @@ const Destination = ({destinations}:Props) => {
                     }
                 </ul>
             </div>
-            <div className="text-center">
-                <h1 className="text-white text-[56px] font-bellefair uppercase">{destination.name}</h1>
+            <div className="text-center lg:text-left flex flex-col gap-y-4">
+                <h1 className="text-white text-[56px] md:text-[80px] lg:text-8xl font-bellefair uppercase">{destination.name}</h1>
                 <p className="description">{destination.description}</p>
             </div>
             <Line />
-            <div className="flex flex-col gap-y-6 justify-center">
+            <div className="flex flex-col md:flex-row gap-6 justify-center md:justify-around lg:justify-start">
               <Statistic title="avg. distance" value={destination.distance} />
               <Statistic title="est. travel time" value={destination.travel} />
             </div>
           </div>
-            
+        </div>
         }
 
         image={
-          <div className="m-auto">
+          <div>
               <ReactiveImg webSrc={destination.images.webp} fallbackSrc={destination.images.png} alt={destination.name}
-              className="w-[150px]"
+              className="max-w-[150px] md:max-w-[300px] lg:max-w-full lg:w-[480px]"
                />
           </div>
         }
