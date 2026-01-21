@@ -1,22 +1,11 @@
+import { appConfig } from "./app.config";
 
 export const routes: {
     path: string,
     name: string
-}[] = [
-    {
-        path: "/",
-        name: "Home"
-    },
-    { 
-        path: "/destination",
-        name: "Destination"
-    },
-    {
-        path: "/crew",
-        name: "Crew"
-    },
-    {
-        path: "/technology",
-        name: "Technology"
+}[] = Object.keys(appConfig).map((key) => {
+    return {
+        name: key,
+        path: appConfig[key as keyof typeof appConfig].path
     }
-]
+})
