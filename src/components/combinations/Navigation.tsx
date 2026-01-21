@@ -8,9 +8,9 @@ import { useClickOutside } from "@/utils/useClickOutside"
 
 const Navigation = () => {
     const [open, setOpen] = useState(false);
-    const menuboardRef = useRef<HTMLDivElement>(null);
+    const closeMenuRef = useRef<HTMLDivElement>(null);
   
-    useClickOutside(menuboardRef, () => setOpen(false))
+    useClickOutside(closeMenuRef, () => setOpen(false))
 
     const toggleMenu = () => setOpen((pre) => !pre);
 
@@ -47,7 +47,6 @@ const Navigation = () => {
                 duration-300
                 `}>
                     <div 
-                    ref={menuboardRef}
                     className="
                     flex 
                     flex-col 
@@ -60,7 +59,9 @@ const Navigation = () => {
                     items-start
                     pl-8
                     ">
-                      <div className="p-8 w-full">
+                      <div className="p-8 w-full"
+                      ref={closeMenuRef}
+                      >
                         <button 
                         className="block ms-auto"
                         onClick={toggleMenu} aria-label="Toggle menu"
