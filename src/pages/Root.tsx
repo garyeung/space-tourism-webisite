@@ -22,14 +22,12 @@ const Root = () => {
 
     
     return (
-        <div className="relative min-h-screen flex flex-col">
+        <div className="relative min-h-screen flex flex-col overflow-hidden">
           <Background {...background} />
           <header className="p-6 md:p-0 lg:pt-10">
             <Navigation/>
           </header>
-          <main>
             <Outlet />
-          </main>
         </div>
     )
 }
