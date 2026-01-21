@@ -1,11 +1,11 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css'
-import Root from '@/pages/Root';
-import Home from '@/pages/Home';
 import { appConfig } from '@/app.config';
 import Destination from '@/pages/Destination';
 import { fetchData, IData } from '@/services/fetchData';
 import { useEffect, useState } from 'react';
+import Root from '@/pages/Root';
+import Home from '@/pages/Home';
 import Crew from '@/pages/Crew';
 import Technology from '@/pages/Technology';
 
