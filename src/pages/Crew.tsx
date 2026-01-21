@@ -28,7 +28,7 @@ const Crew = ({crews}:Props) => {
     }
 
     const dotPageList = (
-        <ul className="flex flex-row gap-x-4 justify-center">
+        <ul className="flex flex-row gap-4 justify-center lg:justify-start lg:gap-10">
             {
                 crews.map((item) => {
                     return (
@@ -42,32 +42,34 @@ const Crew = ({crews}:Props) => {
     )
     return (
         <PageLayout
+            className="lg:justify-center"
+            contentStyle="md:grid-rows-[1fr,auto] flex-1"
             number={2}
             title={"meet your crew"}
             explantion={
-                <div className="flex flex-col gap-y-6 text-center">
-                    <div className="flex flex-col gap-y-6">
-                        <div className="text-white uppercase font-bellefair pt-10">
-                            <span className="opacity-50 text-lg">{crew.role}</span>
-                            <h1 className="text-2xl">{crew.name}</h1>
+                <div className="flex flex-col gap-6 lg:gap-10 text-center max-w-[512px] lg:min-w-[539px]">
+                    <div className="flex flex-col gap-y-6 flex-1 justify-center">
+                        <div className="text-white uppercase font-bellefair pt-10 flex flex-col gap-2 md:gap-4 lg:text-left">
+                            <span className="opacity-50 text-lg md:text-2xl lg:text-[32px] lg:opacity-[50.42%]">{crew.role}</span>
+                            <h1 className="text-2xl md:text-[40px]
+                            md:leading-normal lg:text-[56px]">{crew.name}</h1>
                         </div>
                         <div className="pb-10">
-                          <p className="description">{crew.bio}</p>
+                          <p className="description
+                          md:text-[18px] lg:text-left">{crew.bio}</p>
 
                         </div>
                     </div>
-                    <div>{dotPageList}</div>
+                    <div className="lg:pb-12">{dotPageList}</div>
                 </div>
             }
 
             image={
-              <div>
+              <div className="order-2">
                 <ReactiveImg webSrc={crew.images.webp} fallbackSrc={crew.images.png} alt={crew.name} 
                 className="masking w-4/5" />
               </div>
             }
-
-            className="flex-col-reverse"
         />
     )
 }
