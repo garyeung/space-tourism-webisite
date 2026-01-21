@@ -52,7 +52,6 @@ const Hero = (props:HeroProps) => {
                 md:text-[144px]
               ">{props.title}</h1>
               <p className="
-                font-barlow
                 description 
               "
               >{props.descrition}</p>
