@@ -13,6 +13,7 @@ const Tab = ({label, handleClick, active}: Props) => {
         text-base
         font-barlow
         tracking-[15%]
+        md:tracking-[2px]
         text-blue-300
         uppercase
         border-white
