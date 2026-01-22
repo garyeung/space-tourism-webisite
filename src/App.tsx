@@ -1,5 +1,4 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import './App.css'
 import { appConfig } from '@/app.config';
 import Destination from '@/pages/Destination';
 import { fetchData, IData } from '@/services/fetchData';
@@ -8,6 +7,7 @@ import Root from '@/pages/Root';
 import Home from '@/pages/Home';
 import Crew from '@/pages/Crew';
 import Technology from '@/pages/Technology';
+import Spinner from './components/bases/Spinner';
 
 function App() {
   const [data, setData] = useState<IData|null>(null);
@@ -21,7 +21,12 @@ function App() {
   }, [])
 
   if (!data) {
-    return; 
+    return ( 
+      <div className='absolute w-full h-full inset-0 flex items-center justify-center bg-white/10'>
+        <Spinner light={false}/>
+        loading...
+      </div>
+    );
   }
   
   const router = createBrowserRouter([
