@@ -9,7 +9,7 @@ interface Props {
     lazy?: boolean
 }
 
-const ReactiveImg = ({webSrc, fallbackSrc, alt, className, lazy = false}:Props) => {
+const ReactiveImg = ({webSrc, fallbackSrc, alt, className, lazy = true}:Props) => {
     const [loading, setLoading] = useState(true);
     const imgRef = useRef<HTMLImageElement>(null);
 
