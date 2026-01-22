@@ -1,5 +1,4 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import './App.css'
 import { appConfig } from '@/app.config';
 import Destination from '@/pages/Destination';
 import { fetchData, IData } from '@/services/fetchData';
