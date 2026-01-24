@@ -19,6 +19,8 @@ const Tab = ({label, handleClick, active}: Props) => {
         border-white
         pb-[10px]
         border-b-[3px]
+        duration-500
+        transition-colors
         hover:border-opacity-50
         ${active? "border-opacity-100": "border-opacity-0"}
         `}>
