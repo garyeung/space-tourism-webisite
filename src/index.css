@@ -126,7 +126,7 @@
 
   .animate-outline-pulse {
     animation: outline-pulse calc(var(--animation-base-duration) * 2.5) ease-out none;
-    animation-delay: calc(var(--animation-base-delay) * 10);
+    animation-delay: calc(var(--animation-base-delay) * 20);
   }
 }
 
