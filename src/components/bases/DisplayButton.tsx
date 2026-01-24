@@ -31,6 +31,7 @@ const DisplayButton = ({path}: Props) => {
             outline-offset-0
             hover:outline-[88px]
             hover:outline-white/10
+            animate-outline-pulse
             `}
         >
             explore

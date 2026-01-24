@@ -47,7 +47,7 @@ const Crew = ({crews}:Props) => {
             number={2}
             title={"meet your crew"}
             explantion={
-                <div className="flex flex-col gap-6 lg:gap-10 text-center max-w-[512px] lg:min-w-[539px]">
+                <div className="flex flex-col gap-6 lg:gap-10 text-center max-w-[512px] lg:max-w-[539px]">
                     <div className="flex flex-col gap-y-6 flex-1 justify-center">
                         <div className="text-white uppercase font-bellefair pt-10 flex flex-col gap-2 md:gap-4 lg:text-left">
                             <span className="opacity-50 text-lg md:text-2xl lg:text-[32px] lg:opacity-[50.42%]">{crew.role}</span>
@@ -65,7 +65,7 @@ const Crew = ({crews}:Props) => {
             }
 
             image={
-              <div className="order-2">
+              <div className="order-2 max-w-[539px]">
                 <ReactiveImg webSrc={crew.images.webp} fallbackSrc={crew.images.png} alt={crew.name} 
                 className="masking w-4/5" />
               </div>

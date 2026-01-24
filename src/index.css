@@ -13,67 +13,17 @@
 }
 
 
+:root {
+  --animation-base-duration: 0.8s;
+  --animation-base-delay: 0.1s;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
 @layer utilities{
-
-    .text-preset-1 {
-     font-family: "Bellefair", serif;
-     font-size: 144px;
-    }
-
-    .text-preset-2 {
-     font-family: "Bellefair", serif;
-     font-size: 100px;
-    }
-
-    .text-preset-3 {
-     font-family: "Bellefair", serif;
-     font-size: 56px;
-    }
-
-    .text-preset-4 {
-     font-family: "Bellefair", serif;
-     font-size: 32px;
-    }
-
-    .text-preset-5{
-        font-family: "Barlow Condensed", sans-serif;
-        font-size: 28px;
-        letter-spacing: 4px;
-    }
-
-    .text-preset-6{
-        font-family: "Bellefair", sans-serif;
-        font-size: 28px;
-    }
-
-    .text-preset-7{
-        font-family: "Barlow Condensed", sans-serif;
-        font-size: 14px;
-        letter-spacing: 2px;
-
-    }
-
-    .text-preset-8{
-        font-family: "Barlow Condensed", sans-serif;
-        font-size: 16px;
-        letter-spacing: 2px;
-
-    }
-
-    .text-preset-9 {
-     font-family: "Bellefair", serif;
-     font-size: 18px;
-     line-height: 180%;
-    }
-
-    .smooth-border {
-        transition: border-color 0.4s ease;
-    }
 
     .fade-enter {
       opacity: 0;
@@ -107,29 +57,94 @@
 
 }
 
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes outline-pulse {
+  0% {
+    outline-width: 0px;
+    outline-color: rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    outline-width: 88px;
+    outline-color: rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    outline-width: 0px;
+    outline-color: rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@layer utilities{
+
+  .animate-fade-in-up-1 {
+    animation: fade-in-up var(--animation-base-duration) ease-out forwards;
+    animation-delay: var(--animation-base-delay);
+  }
+  .animate-fade-in-up-2 {
+    animation: fade-in-up calc(var(--animation-base-duration) * 1.5) ease-out forwards;
+    animation-delay: calc(var(--animation-base-delay) * 2);
+  }
+  .animate-fade-in-up-3 {
+    animation: fade-in-up calc(var(--animation-base-duration) * 2) ease-out forwards;
+    animation-delay: calc(var(--animation-base-delay) * 3);
+  }
+
+  .animate-fade-in-right-1 {
+    animation: fade-in-right var(--animation-base-duration) ease-out forwards;
+    animation-delay: var(--animation-base-delay);
+  }
+
+  .animate-fade-in-right-2 {
+    animation: fade-in-right calc(var(--animation-base-duration) * 1.5) ease-out forwards;
+    animation-delay: calc(var(--animation-base-delay) * 2);
+  }
+
+  .animate-fade-in-right-3 {
+    animation: fade-in-right calc(var(--animation-base-duration) * 2) ease-out forwards;
+    animation-delay: calc(var(--animation-base-delay) * 3);
+  }
+
+  .animate-outline-pulse {
+    animation: outline-pulse calc(var(--animation-base-duration) * 2.5) ease-out none;
+    animation-delay: calc(var(--animation-base-delay) * 10);
+  }
+}
+
 @layer components {
-    .page-title{
-      @apply mb-6 text-center text-white tracking-[0.15em] font-sans uppercase md:text-xl md:text-left md:text-[28px];
-    }
     .description{
       @apply leading-[1.8] text-blue-300 text-center text-[15px] md:text-[16px] lg:text-lg lg:text-start font-barlow;
     }
 
-    .content {
-      @apply flex flex-col lg:flex-row gap-8;
+    .animate-fade-in-1 {
+      @apply opacity-0 animate-fade-in-up-1 lg:animate-fade-in-right-1;
     }
 
-    .explanation{
-      @apply mt-10 pb-6 text-center md:w-3/5 lg:w-fit mx-auto lg:pb-10 lg:mx-0 flex flex-col justify-center lg:text-left gap-6 h-full;
+    .animate-fade-in-2 {
+      @apply opacity-0 animate-fade-in-up-2 lg:animate-fade-in-right-2;
     }
-    .explanation-text{
-      @apply text-white font-serif uppercase;
-    }
-    .explanation-rank{
-      @apply mb-2 text-lg opacity-50 md:text-2xl md:mb-4 lg:text-[32px];
-    }
-    .explanation-name{
-      @apply text-2xl md:text-[40px] lg:text-[56px] lg:leading-[4rem];
+
+    .animate-fade-in-3 {
+      @apply opacity-0 animate-fade-in-up-3 lg:animate-fade-in-right-3;
     }
 
 }

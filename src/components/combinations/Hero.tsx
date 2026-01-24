@@ -43,6 +43,7 @@ const Hero = (props:HeroProps) => {
               font-barlow text-base uppercase tracking-[15%]
               md:text-[28px]
               md:tracking-[4px]
+              animate-fade-in-1 
               ">{props.subtitle}</p>
               <h1 className="
                 font-bellefair
@@ -50,9 +51,11 @@ const Hero = (props:HeroProps) => {
                 text-[80px]
                 uppercase
                 md:text-[144px]
+                animate-fade-in-2
               ">{props.title}</h1>
               <p className="
                 description 
+                animate-fade-in-3
               "
               >{props.descrition}</p>
             </article>

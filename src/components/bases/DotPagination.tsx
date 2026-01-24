@@ -16,6 +16,8 @@ const DotPagination = ({handleClick,active}:Props) => {
             lg:w-[15px]
             bg-white
             rounded-full
+            duration-500
+            transition-opacity
             hover:opacity-50
             ${active? "opacity-100": "opacity-[17.44%]"}
             `}
